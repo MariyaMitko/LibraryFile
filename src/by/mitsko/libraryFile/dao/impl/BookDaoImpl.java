@@ -25,17 +25,13 @@ public class BookDaoImpl implements BookDao {
 			String str;
 			
 			String [] lines = new String [5];
-			
+			int j = 0;
 			while ((str = brd.readLine()) != null){
 				
-				
-				for (int j = 0; j < 5; j++) {
-				   lines[j] = str;
-				   String [] strArray = lines[j].split(", ");
-				   addBook(strArray, books, authors, j);
-				
-				}
-				
+			 lines[j] = str;
+			 String [] strArray = lines[j].split(", ");
+			 addBook(strArray, books, authors, j);
+			 j++;
 				
 			}
 			}catch (IOException e) {
